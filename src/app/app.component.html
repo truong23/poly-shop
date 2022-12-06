@@ -1,0 +1,19 @@
+<div class="container">
+  <header class="row">Header</header>
+  <nav class="row">
+    <nav class="nav justify-content-center">
+      <a class="nav-link active" [routerLink]="['/product-list']" routerLinkActive="router-link-active">Product List</a>
+      <a class="nav-link" [routerLink]="['/product-detail']">Product Detail</a>
+      <a class="nav-link" [routerLink]="['/admin']">Admin Dashboard</a>
+      <a class="nav-link" [routerLink]="['/login']">Login</a>
+      <a class="nav-link" [routerLink]="['/product-add']">Product Add</a>
+
+
+    </nav>
+  </nav>
+  <section class="row">
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+</div>
