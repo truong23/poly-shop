@@ -16,7 +16,7 @@
                     <td>
                         View 
                         <a [routerLink]="['/category-edit/'+ item.id]" routerLinkActive="router-link-active" >Edit</a> 
-                        <span class="text-decoration-underline text-primary" (click)="delete()"> Delete</span> 
+                        <a class="text-decoration-underline text-primary" (click)="delete(item.id.toString())"> Delete</a> 
                     </td>
                 </tr>
             </tbody>

@@ -18,13 +18,13 @@ export class CategoryService {
     return this.httpClient.get(`${this.url}/${id}`)
   }
 
-  delete(id: string){
+  delete(id:string){
     return this.httpClient.delete(`${this.url}/${id}`)
   }
   save(category: Category){
     return this.httpClient.post(this.url, category)
   }
-  update(id:string, category: Category){
+  update(id:string|number, category: Category){
     return this.httpClient.put(`${this.url}/${id}`,category)
   }
 }

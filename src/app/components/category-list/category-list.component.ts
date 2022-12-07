@@ -20,8 +20,7 @@ export class CategoryListComponent implements OnInit {
       this.categories = data as Category[]
     })
   }
-  delete(){
-
+  delete(id: string) {
+    this.categoryServive.delete(id)
   }
-
 }
