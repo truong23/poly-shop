@@ -13,6 +13,11 @@ import { AdminRoutes } from './routes/admin.routing';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
+import { CategoryAddComponent } from './components/category-add/category-add.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CategoryListComponent } from './components/category-list/category-list.component';
+import { CategoryEditComponent } from './components/category-edit/category-edit.component';
+import { SharedModule } from './modules/shared/shared.module';
 
 const routers: Routes = [
   {path: 'product-list', component: ProductListComponent},
@@ -31,12 +36,17 @@ const routers: Routes = [
     DashboardComponent,
     NotFoundComponent,
     LoginComponent,
-    ProductAddComponent
+    ProductAddComponent,
+    CategoryAddComponent,
+    CategoryListComponent,
+    CategoryEditComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule,
+    HttpClientModule,
     AdminRoutes,
     RouterModule.forRoot(routers)
   ],

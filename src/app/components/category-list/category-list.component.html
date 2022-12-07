@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-head">List Categ0ry</div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Category Id</th>
+                    <th>Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of categories">
+                    <td scope="row">{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>
+                        View 
+                        <a [routerLink]="['/category-edit/'+ item.id]" routerLinkActive="router-link-active" >Edit</a> 
+                        <span class="text-decoration-underline text-primary" (click)="delete()"> Delete</span> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>  
+    </div>
+    <div class="card-footer text-muted">
+        <a [routerLink]="['/category-add']" class="btn btn-outline btn-primary">Add New Category</a>
+    </div>
+</div>
